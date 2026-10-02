@@ -1,6 +1,13 @@
-# Power BI DAX Measures
+# Power BI measures
 
-## Revenue
+These are the core measures for the report. The names follow the terms used in the CSV files so the model stays easy to maintain.
+
+## Order value
+
+```DAX
+Total Orders =
+DISTINCTCOUNT(orders[order_id])
+```
 
 ```DAX
 GMV =
@@ -17,12 +24,17 @@ Net Order Value =
 SUM(orders[net_order_value_inr])
 ```
 
-## Order quality
+```DAX
+Average Order Value =
+DIVIDE([Net Order Value], [Total Orders])
+```
 
 ```DAX
-Total Orders =
-DISTINCTCOUNT(orders[order_id])
+Discount Rate =
+DIVIDE([Discount Cost], [GMV])
 ```
+
+## Order status
 
 ```DAX
 Cancelled Orders =
@@ -38,6 +50,14 @@ DIVIDE([Cancelled Orders], [Total Orders])
 ```
 
 ```DAX
+Delivered Orders =
+CALCULATE(
+    [Total Orders],
+    orders[order_status] = "Delivered"
+)
+```
+
+```DAX
 Returned Orders =
 CALCULATE(
     [Total Orders],
@@ -47,17 +67,17 @@ CALCULATE(
 
 ```DAX
 Return Rate =
-DIVIDE(
-    [Returned Orders],
-    CALCULATE([Total Orders], orders[order_status] = "Delivered")
-)
+DIVIDE([Returned Orders], [Delivered Orders])
 ```
 
 ## Fulfillment
 
 ```DAX
-Shipping Cost =
-SUM(shipments[shipping_cost_inr])
+Shipped Orders =
+CALCULATE(
+    DISTINCTCOUNT(shipments[shipment_id]),
+    shipments[delivery_status] <> "Not Shipped"
+)
 ```
 
 ```DAX
@@ -70,7 +90,15 @@ CALCULATE(
 
 ```DAX
 On Time Delivery % =
-1 - DIVIDE([Late Shipments], DISTINCTCOUNT(shipments[shipment_id]))
+DIVIDE(
+    [Shipped Orders] - [Late Shipments],
+    [Shipped Orders]
+)
+```
+
+```DAX
+Shipping Cost =
+SUM(shipments[shipping_cost_inr])
 ```
 
 ## Returns
@@ -85,7 +113,7 @@ Return Handling Cost =
 SUM(returns[return_handling_cost_inr])
 ```
 
-## Leakage
+## Cost view
 
 ```DAX
 Identified Leakage =
@@ -95,9 +123,6 @@ Identified Leakage =
     + [Return Handling Cost]
 ```
 
-```DAX
-Average Order Value =
-DIVIDE([Net Order Value], [Total Orders])
-```
+This is a project-level tracking measure. It is not an accounting profit/loss calculation.
 
-Use percentage formatting for rate measures and INR formatting for monetary measures.
+Format rates as percentages and monetary measures as INR.
