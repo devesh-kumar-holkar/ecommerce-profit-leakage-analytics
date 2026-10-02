@@ -1,0 +1,501 @@
+customer_id,signup_date,customer_segment,city,acquisition_channel
+C00001,2024-02-02,Regular,Delhi,Organic
+C00002,2024-03-03,High Value,Mumbai,Paid Search
+C00003,2024-04-04,New,Bengaluru,Social
+C00004,2024-05-05,Regular,Hyderabad,Referral
+C00005,2024-06-06,High Value,Pune,Affiliate
+C00006,2024-07-07,New,Jaipur,Organic
+C00007,2024-08-08,Regular,Lucknow,Paid Search
+C00008,2024-09-09,High Value,Bhopal,Social
+C00009,2024-10-10,New,Delhi,Referral
+C00010,2024-11-11,Regular,Mumbai,Affiliate
+C00011,2024-12-12,High Value,Bengaluru,Organic
+C00012,2024-01-13,New,Hyderabad,Paid Search
+C00013,2024-02-14,Regular,Pune,Social
+C00014,2024-03-15,High Value,Jaipur,Referral
+C00015,2024-04-16,New,Lucknow,Affiliate
+C00016,2024-05-17,Regular,Bhopal,Organic
+C00017,2024-06-18,High Value,Delhi,Paid Search
+C00018,2024-07-19,New,Mumbai,Social
+C00019,2024-08-20,Regular,Bengaluru,Referral
+C00020,2024-09-21,High Value,Hyderabad,Affiliate
+C00021,2024-10-22,New,Pune,Organic
+C00022,2024-11-23,Regular,Jaipur,Paid Search
+C00023,2024-12-24,High Value,Lucknow,Social
+C00024,2024-01-25,New,Bhopal,Referral
+C00025,2024-02-26,Regular,Delhi,Affiliate
+C00026,2024-03-27,High Value,Mumbai,Organic
+C00027,2024-04-01,New,Bengaluru,Paid Search
+C00028,2024-05-02,Regular,Hyderabad,Social
+C00029,2024-06-03,High Value,Pune,Referral
+C00030,2024-07-04,New,Jaipur,Affiliate
+C00031,2024-08-05,Regular,Lucknow,Organic
+C00032,2024-09-06,High Value,Bhopal,Paid Search
+C00033,2024-10-07,New,Delhi,Social
+C00034,2024-11-08,Regular,Mumbai,Referral
+C00035,2024-12-09,High Value,Bengaluru,Affiliate
+C00036,2024-01-10,New,Hyderabad,Organic
+C00037,2024-02-11,Regular,Pune,Paid Search
+C00038,2024-03-12,High Value,Jaipur,Social
+C00039,2024-04-13,New,Lucknow,Referral
+C00040,2024-05-14,Regular,Bhopal,Affiliate
+C00041,2024-06-15,High Value,Delhi,Organic
+C00042,2024-07-16,New,Mumbai,Paid Search
+C00043,2024-08-17,Regular,Bengaluru,Social
+C00044,2024-09-18,High Value,Hyderabad,Referral
+C00045,2024-10-19,New,Pune,Affiliate
+C00046,2024-11-20,Regular,Jaipur,Organic
+C00047,2024-12-21,High Value,Lucknow,Paid Search
+C00048,2024-01-22,New,Bhopal,Social
+C00049,2024-02-23,Regular,Delhi,Referral
+C00050,2024-03-24,High Value,Mumbai,Affiliate
+C00051,2024-04-25,New,Bengaluru,Organic
+C00052,2024-05-26,Regular,Hyderabad,Paid Search
+C00053,2024-06-27,High Value,Pune,Social
+C00054,2024-07-01,New,Jaipur,Referral
+C00055,2024-08-02,Regular,Lucknow,Affiliate
+C00056,2024-09-03,High Value,Bhopal,Organic
+C00057,2024-10-04,New,Delhi,Paid Search
+C00058,2024-11-05,Regular,Mumbai,Social
+C00059,2024-12-06,High Value,Bengaluru,Referral
+C00060,2024-01-07,New,Hyderabad,Affiliate
+C00061,2024-02-08,Regular,Pune,Organic
+C00062,2024-03-09,High Value,Jaipur,Paid Search
+C00063,2024-04-10,New,Lucknow,Social
+C00064,2024-05-11,Regular,Bhopal,Referral
+C00065,2024-06-12,High Value,Delhi,Affiliate
+C00066,2024-07-13,New,Mumbai,Organic
+C00067,2024-08-14,Regular,Bengaluru,Paid Search
+C00068,2024-09-15,High Value,Hyderabad,Social
+C00069,2024-10-16,New,Pune,Referral
+C00070,2024-11-17,Regular,Jaipur,Affiliate
+C00071,2024-12-18,High Value,Lucknow,Organic
+C00072,2024-01-19,New,Bhopal,Paid Search
+C00073,2024-02-20,Regular,Delhi,Social
+C00074,2024-03-21,High Value,Mumbai,Referral
+C00075,2024-04-22,New,Bengaluru,Affiliate
+C00076,2024-05-23,Regular,Hyderabad,Organic
+C00077,2024-06-24,High Value,Pune,Paid Search
+C00078,2024-07-25,New,Jaipur,Social
+C00079,2024-08-26,Regular,Lucknow,Referral
+C00080,2024-09-27,High Value,Bhopal,Affiliate
+C00081,2024-10-01,New,Delhi,Organic
+C00082,2024-11-02,Regular,Mumbai,Paid Search
+C00083,2024-12-03,High Value,Bengaluru,Social
+C00084,2024-01-04,New,Hyderabad,Referral
+C00085,2024-02-05,Regular,Pune,Affiliate
+C00086,2024-03-06,High Value,Jaipur,Organic
+C00087,2024-04-07,New,Lucknow,Paid Search
+C00088,2024-05-08,Regular,Bhopal,Social
+C00089,2024-06-09,High Value,Delhi,Referral
+C00090,2024-07-10,New,Mumbai,Affiliate
+C00091,2024-08-11,Regular,Bengaluru,Organic
+C00092,2024-09-12,High Value,Hyderabad,Paid Search
+C00093,2024-10-13,New,Pune,Social
+C00094,2024-11-14,Regular,Jaipur,Referral
+C00095,2024-12-15,High Value,Lucknow,Affiliate
+C00096,2024-01-16,New,Bhopal,Organic
+C00097,2024-02-17,Regular,Delhi,Paid Search
+C00098,2024-03-18,High Value,Mumbai,Social
+C00099,2024-04-19,New,Bengaluru,Referral
+C00100,2024-05-20,Regular,Hyderabad,Affiliate
+C00101,2024-06-21,High Value,Pune,Organic
+C00102,2024-07-22,New,Jaipur,Paid Search
+C00103,2024-08-23,Regular,Lucknow,Social
+C00104,2024-09-24,High Value,Bhopal,Referral
+C00105,2024-10-25,New,Delhi,Affiliate
+C00106,2024-11-26,Regular,Mumbai,Organic
+C00107,2024-12-27,High Value,Bengaluru,Paid Search
+C00108,2024-01-01,New,Hyderabad,Social
+C00109,2024-02-02,Regular,Pune,Referral
+C00110,2024-03-03,High Value,Jaipur,Affiliate
+C00111,2024-04-04,New,Lucknow,Organic
+C00112,2024-05-05,Regular,Bhopal,Paid Search
+C00113,2024-06-06,High Value,Delhi,Social
+C00114,2024-07-07,New,Mumbai,Referral
+C00115,2024-08-08,Regular,Bengaluru,Affiliate
+C00116,2024-09-09,High Value,Hyderabad,Organic
+C00117,2024-10-10,New,Pune,Paid Search
+C00118,2024-11-11,Regular,Jaipur,Social
+C00119,2024-12-12,High Value,Lucknow,Referral
+C00120,2024-01-13,New,Bhopal,Affiliate
+C00121,2024-02-14,Regular,Delhi,Organic
+C00122,2024-03-15,High Value,Mumbai,Paid Search
+C00123,2024-04-16,New,Bengaluru,Social
+C00124,2024-05-17,Regular,Hyderabad,Referral
+C00125,2024-06-18,High Value,Pune,Affiliate
+C00126,2024-07-19,New,Jaipur,Organic
+C00127,2024-08-20,Regular,Lucknow,Paid Search
+C00128,2024-09-21,High Value,Bhopal,Social
+C00129,2024-10-22,New,Delhi,Referral
+C00130,2024-11-23,Regular,Mumbai,Affiliate
+C00131,2024-12-24,High Value,Bengaluru,Organic
+C00132,2024-01-25,New,Hyderabad,Paid Search
+C00133,2024-02-26,Regular,Pune,Social
+C00134,2024-03-27,High Value,Jaipur,Referral
+C00135,2024-04-01,New,Lucknow,Affiliate
+C00136,2024-05-02,Regular,Bhopal,Organic
+C00137,2024-06-03,High Value,Delhi,Paid Search
+C00138,2024-07-04,New,Mumbai,Social
+C00139,2024-08-05,Regular,Bengaluru,Referral
+C00140,2024-09-06,High Value,Hyderabad,Affiliate
+C00141,2024-10-07,New,Pune,Organic
+C00142,2024-11-08,Regular,Jaipur,Paid Search
+C00143,2024-12-09,High Value,Lucknow,Social
+C00144,2024-01-10,New,Bhopal,Referral
+C00145,2024-02-11,Regular,Delhi,Affiliate
+C00146,2024-03-12,High Value,Mumbai,Organic
+C00147,2024-04-13,New,Bengaluru,Paid Search
+C00148,2024-05-14,Regular,Hyderabad,Social
+C00149,2024-06-15,High Value,Pune,Referral
+C00150,2024-07-16,New,Jaipur,Affiliate
+C00151,2024-08-17,Regular,Lucknow,Organic
+C00152,2024-09-18,High Value,Bhopal,Paid Search
+C00153,2024-10-19,New,Delhi,Social
+C00154,2024-11-20,Regular,Mumbai,Referral
+C00155,2024-12-21,High Value,Bengaluru,Affiliate
+C00156,2024-01-22,New,Hyderabad,Organic
+C00157,2024-02-23,Regular,Pune,Paid Search
+C00158,2024-03-24,High Value,Jaipur,Social
+C00159,2024-04-25,New,Lucknow,Referral
+C00160,2024-05-26,Regular,Bhopal,Affiliate
+C00161,2024-06-27,High Value,Delhi,Organic
+C00162,2024-07-01,New,Mumbai,Paid Search
+C00163,2024-08-02,Regular,Bengaluru,Social
+C00164,2024-09-03,High Value,Hyderabad,Referral
+C00165,2024-10-04,New,Pune,Affiliate
+C00166,2024-11-05,Regular,Jaipur,Organic
+C00167,2024-12-06,High Value,Lucknow,Paid Search
+C00168,2024-01-07,New,Bhopal,Social
+C00169,2024-02-08,Regular,Delhi,Referral
+C00170,2024-03-09,High Value,Mumbai,Affiliate
+C00171,2024-04-10,New,Bengaluru,Organic
+C00172,2024-05-11,Regular,Hyderabad,Paid Search
+C00173,2024-06-12,High Value,Pune,Social
+C00174,2024-07-13,New,Jaipur,Referral
+C00175,2024-08-14,Regular,Lucknow,Affiliate
+C00176,2024-09-15,High Value,Bhopal,Organic
+C00177,2024-10-16,New,Delhi,Paid Search
+C00178,2024-11-17,Regular,Mumbai,Social
+C00179,2024-12-18,High Value,Bengaluru,Referral
+C00180,2024-01-19,New,Hyderabad,Affiliate
+C00181,2024-02-20,Regular,Pune,Organic
+C00182,2024-03-21,High Value,Jaipur,Paid Search
+C00183,2024-04-22,New,Lucknow,Social
+C00184,2024-05-23,Regular,Bhopal,Referral
+C00185,2024-06-24,High Value,Delhi,Affiliate
+C00186,2024-07-25,New,Mumbai,Organic
+C00187,2024-08-26,Regular,Bengaluru,Paid Search
+C00188,2024-09-27,High Value,Hyderabad,Social
+C00189,2024-10-01,New,Pune,Referral
+C00190,2024-11-02,Regular,Jaipur,Affiliate
+C00191,2024-12-03,High Value,Lucknow,Organic
+C00192,2024-01-04,New,Bhopal,Paid Search
+C00193,2024-02-05,Regular,Delhi,Social
+C00194,2024-03-06,High Value,Mumbai,Referral
+C00195,2024-04-07,New,Bengaluru,Affiliate
+C00196,2024-05-08,Regular,Hyderabad,Organic
+C00197,2024-06-09,High Value,Pune,Paid Search
+C00198,2024-07-10,New,Jaipur,Social
+C00199,2024-08-11,Regular,Lucknow,Referral
+C00200,2024-09-12,High Value,Bhopal,Affiliate
+C00201,2024-10-13,New,Delhi,Organic
+C00202,2024-11-14,Regular,Mumbai,Paid Search
+C00203,2024-12-15,High Value,Bengaluru,Social
+C00204,2024-01-16,New,Hyderabad,Referral
+C00205,2024-02-17,Regular,Pune,Affiliate
+C00206,2024-03-18,High Value,Jaipur,Organic
+C00207,2024-04-19,New,Lucknow,Paid Search
+C00208,2024-05-20,Regular,Bhopal,Social
+C00209,2024-06-21,High Value,Delhi,Referral
+C00210,2024-07-22,New,Mumbai,Affiliate
+C00211,2024-08-23,Regular,Bengaluru,Organic
+C00212,2024-09-24,High Value,Hyderabad,Paid Search
+C00213,2024-10-25,New,Pune,Social
+C00214,2024-11-26,Regular,Jaipur,Referral
+C00215,2024-12-27,High Value,Lucknow,Affiliate
+C00216,2024-01-01,New,Bhopal,Organic
+C00217,2024-02-02,Regular,Delhi,Paid Search
+C00218,2024-03-03,High Value,Mumbai,Social
+C00219,2024-04-04,New,Bengaluru,Referral
+C00220,2024-05-05,Regular,Hyderabad,Affiliate
+C00221,2024-06-06,High Value,Pune,Organic
+C00222,2024-07-07,New,Jaipur,Paid Search
+C00223,2024-08-08,Regular,Lucknow,Social
+C00224,2024-09-09,High Value,Bhopal,Referral
+C00225,2024-10-10,New,Delhi,Affiliate
+C00226,2024-11-11,Regular,Mumbai,Organic
+C00227,2024-12-12,High Value,Bengaluru,Paid Search
+C00228,2024-01-13,New,Hyderabad,Social
+C00229,2024-02-14,Regular,Pune,Referral
+C00230,2024-03-15,High Value,Jaipur,Affiliate
+C00231,2024-04-16,New,Lucknow,Organic
+C00232,2024-05-17,Regular,Bhopal,Paid Search
+C00233,2024-06-18,High Value,Delhi,Social
+C00234,2024-07-19,New,Mumbai,Referral
+C00235,2024-08-20,Regular,Bengaluru,Affiliate
+C00236,2024-09-21,High Value,Hyderabad,Organic
+C00237,2024-10-22,New,Pune,Paid Search
+C00238,2024-11-23,Regular,Jaipur,Social
+C00239,2024-12-24,High Value,Lucknow,Referral
+C00240,2024-01-25,New,Bhopal,Affiliate
+C00241,2024-02-26,Regular,Delhi,Organic
+C00242,2024-03-27,High Value,Mumbai,Paid Search
+C00243,2024-04-01,New,Bengaluru,Social
+C00244,2024-05-02,Regular,Hyderabad,Referral
+C00245,2024-06-03,High Value,Pune,Affiliate
+C00246,2024-07-04,New,Jaipur,Organic
+C00247,2024-08-05,Regular,Lucknow,Paid Search
+C00248,2024-09-06,High Value,Bhopal,Social
+C00249,2024-10-07,New,Delhi,Referral
+C00250,2024-11-08,Regular,Mumbai,Affiliate
+C00251,2024-12-09,High Value,Bengaluru,Organic
+C00252,2024-01-10,New,Hyderabad,Paid Search
+C00253,2024-02-11,Regular,Pune,Social
+C00254,2024-03-12,High Value,Jaipur,Referral
+C00255,2024-04-13,New,Lucknow,Affiliate
+C00256,2024-05-14,Regular,Bhopal,Organic
+C00257,2024-06-15,High Value,Delhi,Paid Search
+C00258,2024-07-16,New,Mumbai,Social
+C00259,2024-08-17,Regular,Bengaluru,Referral
+C00260,2024-09-18,High Value,Hyderabad,Affiliate
+C00261,2024-10-19,New,Pune,Organic
+C00262,2024-11-20,Regular,Jaipur,Paid Search
+C00263,2024-12-21,High Value,Lucknow,Social
+C00264,2024-01-22,New,Bhopal,Referral
+C00265,2024-02-23,Regular,Delhi,Affiliate
+C00266,2024-03-24,High Value,Mumbai,Organic
+C00267,2024-04-25,New,Bengaluru,Paid Search
+C00268,2024-05-26,Regular,Hyderabad,Social
+C00269,2024-06-27,High Value,Pune,Referral
+C00270,2024-07-01,New,Jaipur,Affiliate
+C00271,2024-08-02,Regular,Lucknow,Organic
+C00272,2024-09-03,High Value,Bhopal,Paid Search
+C00273,2024-10-04,New,Delhi,Social
+C00274,2024-11-05,Regular,Mumbai,Referral
+C00275,2024-12-06,High Value,Bengaluru,Affiliate
+C00276,2024-01-07,New,Hyderabad,Organic
+C00277,2024-02-08,Regular,Pune,Paid Search
+C00278,2024-03-09,High Value,Jaipur,Social
+C00279,2024-04-10,New,Lucknow,Referral
+C00280,2024-05-11,Regular,Bhopal,Affiliate
+C00281,2024-06-12,High Value,Delhi,Organic
+C00282,2024-07-13,New,Mumbai,Paid Search
+C00283,2024-08-14,Regular,Bengaluru,Social
+C00284,2024-09-15,High Value,Hyderabad,Referral
+C00285,2024-10-16,New,Pune,Affiliate
+C00286,2024-11-17,Regular,Jaipur,Organic
+C00287,2024-12-18,High Value,Lucknow,Paid Search
+C00288,2024-01-19,New,Bhopal,Social
+C00289,2024-02-20,Regular,Delhi,Referral
+C00290,2024-03-21,High Value,Mumbai,Affiliate
+C00291,2024-04-22,New,Bengaluru,Organic
+C00292,2024-05-23,Regular,Hyderabad,Paid Search
+C00293,2024-06-24,High Value,Pune,Social
+C00294,2024-07-25,New,Jaipur,Referral
+C00295,2024-08-26,Regular,Lucknow,Affiliate
+C00296,2024-09-27,High Value,Bhopal,Organic
+C00297,2024-10-01,New,Delhi,Paid Search
+C00298,2024-11-02,Regular,Mumbai,Social
+C00299,2024-12-03,High Value,Bengaluru,Referral
+C00300,2024-01-04,New,Hyderabad,Affiliate
+C00301,2024-02-05,Regular,Pune,Organic
+C00302,2024-03-06,High Value,Jaipur,Paid Search
+C00303,2024-04-07,New,Lucknow,Social
+C00304,2024-05-08,Regular,Bhopal,Referral
+C00305,2024-06-09,High Value,Delhi,Affiliate
+C00306,2024-07-10,New,Mumbai,Organic
+C00307,2024-08-11,Regular,Bengaluru,Paid Search
+C00308,2024-09-12,High Value,Hyderabad,Social
+C00309,2024-10-13,New,Pune,Referral
+C00310,2024-11-14,Regular,Jaipur,Affiliate
+C00311,2024-12-15,High Value,Lucknow,Organic
+C00312,2024-01-16,New,Bhopal,Paid Search
+C00313,2024-02-17,Regular,Delhi,Social
+C00314,2024-03-18,High Value,Mumbai,Referral
+C00315,2024-04-19,New,Bengaluru,Affiliate
+C00316,2024-05-20,Regular,Hyderabad,Organic
+C00317,2024-06-21,High Value,Pune,Paid Search
+C00318,2024-07-22,New,Jaipur,Social
+C00319,2024-08-23,Regular,Lucknow,Referral
+C00320,2024-09-24,High Value,Bhopal,Affiliate
+C00321,2024-10-25,New,Delhi,Organic
+C00322,2024-11-26,Regular,Mumbai,Paid Search
+C00323,2024-12-27,High Value,Bengaluru,Social
+C00324,2024-01-01,New,Hyderabad,Referral
+C00325,2024-02-02,Regular,Pune,Affiliate
+C00326,2024-03-03,High Value,Jaipur,Organic
+C00327,2024-04-04,New,Lucknow,Paid Search
+C00328,2024-05-05,Regular,Bhopal,Social
+C00329,2024-06-06,High Value,Delhi,Referral
+C00330,2024-07-07,New,Mumbai,Affiliate
+C00331,2024-08-08,Regular,Bengaluru,Organic
+C00332,2024-09-09,High Value,Hyderabad,Paid Search
+C00333,2024-10-10,New,Pune,Social
+C00334,2024-11-11,Regular,Jaipur,Referral
+C00335,2024-12-12,High Value,Lucknow,Affiliate
+C00336,2024-01-13,New,Bhopal,Organic
+C00337,2024-02-14,Regular,Delhi,Paid Search
+C00338,2024-03-15,High Value,Mumbai,Social
+C00339,2024-04-16,New,Bengaluru,Referral
+C00340,2024-05-17,Regular,Hyderabad,Affiliate
+C00341,2024-06-18,High Value,Pune,Organic
+C00342,2024-07-19,New,Jaipur,Paid Search
+C00343,2024-08-20,Regular,Lucknow,Social
+C00344,2024-09-21,High Value,Bhopal,Referral
+C00345,2024-10-22,New,Delhi,Affiliate
+C00346,2024-11-23,Regular,Mumbai,Organic
+C00347,2024-12-24,High Value,Bengaluru,Paid Search
+C00348,2024-01-25,New,Hyderabad,Social
+C00349,2024-02-26,Regular,Pune,Referral
+C00350,2024-03-27,High Value,Jaipur,Affiliate
+C00351,2024-04-01,New,Lucknow,Organic
+C00352,2024-05-02,Regular,Bhopal,Paid Search
+C00353,2024-06-03,High Value,Delhi,Social
+C00354,2024-07-04,New,Mumbai,Referral
+C00355,2024-08-05,Regular,Bengaluru,Affiliate
+C00356,2024-09-06,High Value,Hyderabad,Organic
+C00357,2024-10-07,New,Pune,Paid Search
+C00358,2024-11-08,Regular,Jaipur,Social
+C00359,2024-12-09,High Value,Lucknow,Referral
+C00360,2024-01-10,New,Bhopal,Affiliate
+C00361,2024-02-11,Regular,Delhi,Organic
+C00362,2024-03-12,High Value,Mumbai,Paid Search
+C00363,2024-04-13,New,Bengaluru,Social
+C00364,2024-05-14,Regular,Hyderabad,Referral
+C00365,2024-06-15,High Value,Pune,Affiliate
+C00366,2024-07-16,New,Jaipur,Organic
+C00367,2024-08-17,Regular,Lucknow,Paid Search
+C00368,2024-09-18,High Value,Bhopal,Social
+C00369,2024-10-19,New,Delhi,Referral
+C00370,2024-11-20,Regular,Mumbai,Affiliate
+C00371,2024-12-21,High Value,Bengaluru,Organic
+C00372,2024-01-22,New,Hyderabad,Paid Search
+C00373,2024-02-23,Regular,Pune,Social
+C00374,2024-03-24,High Value,Jaipur,Referral
+C00375,2024-04-25,New,Lucknow,Affiliate
+C00376,2024-05-26,Regular,Bhopal,Organic
+C00377,2024-06-27,High Value,Delhi,Paid Search
+C00378,2024-07-01,New,Mumbai,Social
+C00379,2024-08-02,Regular,Bengaluru,Referral
+C00380,2024-09-03,High Value,Hyderabad,Affiliate
+C00381,2024-10-04,New,Pune,Organic
+C00382,2024-11-05,Regular,Jaipur,Paid Search
+C00383,2024-12-06,High Value,Lucknow,Social
+C00384,2024-01-07,New,Bhopal,Referral
+C00385,2024-02-08,Regular,Delhi,Affiliate
+C00386,2024-03-09,High Value,Mumbai,Organic
+C00387,2024-04-10,New,Bengaluru,Paid Search
+C00388,2024-05-11,Regular,Hyderabad,Social
+C00389,2024-06-12,High Value,Pune,Referral
+C00390,2024-07-13,New,Jaipur,Affiliate
+C00391,2024-08-14,Regular,Lucknow,Organic
+C00392,2024-09-15,High Value,Bhopal,Paid Search
+C00393,2024-10-16,New,Delhi,Social
+C00394,2024-11-17,Regular,Mumbai,Referral
+C00395,2024-12-18,High Value,Bengaluru,Affiliate
+C00396,2024-01-19,New,Hyderabad,Organic
+C00397,2024-02-20,Regular,Pune,Paid Search
+C00398,2024-03-21,High Value,Jaipur,Social
+C00399,2024-04-22,New,Lucknow,Referral
+C00400,2024-05-23,Regular,Bhopal,Affiliate
+C00401,2024-06-24,High Value,Delhi,Organic
+C00402,2024-07-25,New,Mumbai,Paid Search
+C00403,2024-08-26,Regular,Bengaluru,Social
+C00404,2024-09-27,High Value,Hyderabad,Referral
+C00405,2024-10-01,New,Pune,Affiliate
+C00406,2024-11-02,Regular,Jaipur,Organic
+C00407,2024-12-03,High Value,Lucknow,Paid Search
+C00408,2024-01-04,New,Bhopal,Social
+C00409,2024-02-05,Regular,Delhi,Referral
+C00410,2024-03-06,High Value,Mumbai,Affiliate
+C00411,2024-04-07,New,Bengaluru,Organic
+C00412,2024-05-08,Regular,Hyderabad,Paid Search
+C00413,2024-06-09,High Value,Pune,Social
+C00414,2024-07-10,New,Jaipur,Referral
+C00415,2024-08-11,Regular,Lucknow,Affiliate
+C00416,2024-09-12,High Value,Bhopal,Organic
+C00417,2024-10-13,New,Delhi,Paid Search
+C00418,2024-11-14,Regular,Mumbai,Social
+C00419,2024-12-15,High Value,Bengaluru,Referral
+C00420,2024-01-16,New,Hyderabad,Affiliate
+C00421,2024-02-17,Regular,Pune,Organic
+C00422,2024-03-18,High Value,Jaipur,Paid Search
+C00423,2024-04-19,New,Lucknow,Social
+C00424,2024-05-20,Regular,Bhopal,Referral
+C00425,2024-06-21,High Value,Delhi,Affiliate
+C00426,2024-07-22,New,Mumbai,Organic
+C00427,2024-08-23,Regular,Bengaluru,Paid Search
+C00428,2024-09-24,High Value,Hyderabad,Social
+C00429,2024-10-25,New,Pune,Referral
+C00430,2024-11-26,Regular,Jaipur,Affiliate
+C00431,2024-12-27,High Value,Lucknow,Organic
+C00432,2024-01-01,New,Bhopal,Paid Search
+C00433,2024-02-02,Regular,Delhi,Social
+C00434,2024-03-03,High Value,Mumbai,Referral
+C00435,2024-04-04,New,Bengaluru,Affiliate
+C00436,2024-05-05,Regular,Hyderabad,Organic
+C00437,2024-06-06,High Value,Pune,Paid Search
+C00438,2024-07-07,New,Jaipur,Social
+C00439,2024-08-08,Regular,Lucknow,Referral
+C00440,2024-09-09,High Value,Bhopal,Affiliate
+C00441,2024-10-10,New,Delhi,Organic
+C00442,2024-11-11,Regular,Mumbai,Paid Search
+C00443,2024-12-12,High Value,Bengaluru,Social
+C00444,2024-01-13,New,Hyderabad,Referral
+C00445,2024-02-14,Regular,Pune,Affiliate
+C00446,2024-03-15,High Value,Jaipur,Organic
+C00447,2024-04-16,New,Lucknow,Paid Search
+C00448,2024-05-17,Regular,Bhopal,Social
+C00449,2024-06-18,High Value,Delhi,Referral
+C00450,2024-07-19,New,Mumbai,Affiliate
+C00451,2024-08-20,Regular,Bengaluru,Organic
+C00452,2024-09-21,High Value,Hyderabad,Paid Search
+C00453,2024-10-22,New,Pune,Social
+C00454,2024-11-23,Regular,Jaipur,Referral
+C00455,2024-12-24,High Value,Lucknow,Affiliate
+C00456,2024-01-25,New,Bhopal,Organic
+C00457,2024-02-26,Regular,Delhi,Paid Search
+C00458,2024-03-27,High Value,Mumbai,Social
+C00459,2024-04-01,New,Bengaluru,Referral
+C00460,2024-05-02,Regular,Hyderabad,Affiliate
+C00461,2024-06-03,High Value,Pune,Organic
+C00462,2024-07-04,New,Jaipur,Paid Search
+C00463,2024-08-05,Regular,Lucknow,Social
+C00464,2024-09-06,High Value,Bhopal,Referral
+C00465,2024-10-07,New,Delhi,Affiliate
+C00466,2024-11-08,Regular,Mumbai,Organic
+C00467,2024-12-09,High Value,Bengaluru,Paid Search
+C00468,2024-01-10,New,Hyderabad,Social
+C00469,2024-02-11,Regular,Pune,Referral
+C00470,2024-03-12,High Value,Jaipur,Affiliate
+C00471,2024-04-13,New,Lucknow,Organic
+C00472,2024-05-14,Regular,Bhopal,Paid Search
+C00473,2024-06-15,High Value,Delhi,Social
+C00474,2024-07-16,New,Mumbai,Referral
+C00475,2024-08-17,Regular,Bengaluru,Affiliate
+C00476,2024-09-18,High Value,Hyderabad,Organic
+C00477,2024-10-19,New,Pune,Paid Search
+C00478,2024-11-20,Regular,Jaipur,Social
+C00479,2024-12-21,High Value,Lucknow,Referral
+C00480,2024-01-22,New,Bhopal,Affiliate
+C00481,2024-02-23,Regular,Delhi,Organic
+C00482,2024-03-24,High Value,Mumbai,Paid Search
+C00483,2024-04-25,New,Bengaluru,Social
+C00484,2024-05-26,Regular,Hyderabad,Referral
+C00485,2024-06-27,High Value,Pune,Affiliate
+C00486,2024-07-01,New,Jaipur,Organic
+C00487,2024-08-02,Regular,Lucknow,Paid Search
+C00488,2024-09-03,High Value,Bhopal,Social
+C00489,2024-10-04,New,Delhi,Referral
+C00490,2024-11-05,Regular,Mumbai,Affiliate
+C00491,2024-12-06,High Value,Bengaluru,Organic
+C00492,2024-01-07,New,Hyderabad,Paid Search
+C00493,2024-02-08,Regular,Pune,Social
+C00494,2024-03-09,High Value,Jaipur,Referral
+C00495,2024-04-10,New,Lucknow,Affiliate
+C00496,2024-05-11,Regular,Bhopal,Organic
+C00497,2024-06-12,High Value,Delhi,Paid Search
+C00498,2024-07-13,New,Mumbai,Social
+C00499,2024-08-14,Regular,Bengaluru,Referral
+C00500,2024-09-15,High Value,Hyderabad,Affiliate
