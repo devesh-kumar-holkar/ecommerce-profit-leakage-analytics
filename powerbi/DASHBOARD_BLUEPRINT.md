@@ -1,22 +1,29 @@
-# Power BI Dashboard Blueprint
+# Power BI dashboard notes
 
-## Page 1 — Executive Profitability
+The report is planned around the questions I would ask while reviewing the data. The idea is to keep each page useful on its own instead of filling the report with charts.
 
-### KPI cards
+## 1. Overview
+
+**Question:** Are orders growing without the same improvement in realized order value?
+
+Show:
+
+- Total orders
 - GMV
-- Net Order Value
-- Discount Cost
-- Refund Value
-- Shipping Cost
-- Identified Leakage
+- Net order value
+- Average order value
+- Discount rate
+- Order status
 
-### Visuals
-- Monthly GMV vs net value
-- Leakage trend
-- Category contribution
+Main visuals:
+
+- Monthly GMV and net order value
+- Monthly discount rate
 - Order status split
+- Category contribution
 
-### Slicers
+Filters:
+
 - Month
 - Category
 - Customer segment
@@ -24,47 +31,64 @@
 
 ---
 
-## Page 2 — Profit Leakage
+## 2. Where is value leaking?
 
-### Visuals
-- Discount rate by category
-- Refund value by return reason
-- Shipping cost by logistics partner
-- High-revenue / low-contribution products
-- Monthly identified leakage
+**Question:** Which cost buckets need a closer look?
 
-Use conditional formatting to highlight categories where revenue is high but contribution is weak.
+Start with:
+
+- Discount cost
+- Shipping cost
+- Refund value
+- Return handling cost
+- Identified leakage
+
+Then break the numbers down by:
+
+- category
+- return reason
+- logistics partner
+- product
+
+A useful table here is **high-revenue products with lower contribution**. Sales alone should not decide which products get attention.
 
 ---
 
-## Page 3 — Fulfillment & Seller Performance
+## 3. Fulfillment and sellers
 
-### Visuals
+**Question:** Are delivery and seller operations creating avoidable cost?
+
+Useful views:
+
 - On-time delivery %
 - Average shipping cost
+- Late deliveries by logistics partner
 - Seller cancellation rate
 - Seller late-delivery rate
-- Logistics partner comparison
-- Seller operational scorecard
+- Seller order volume
 
-Operational flags:
-- High cancellation rate
-- High late-delivery rate
-- High return rate
+Keep order volume beside the rate. A seller with 1 late order out of 2 should not be read the same way as a seller with 20 late orders out of 200.
 
 ---
 
-## Page 4 — Customer Economics
+## 4. Customers
 
-### Visuals
-- New vs Regular vs High Value customers
-- Orders per customer
-- Customer revenue distribution
-- Acquisition channel performance
-- Return-heavy customer segment
+**Question:** What does the customer base look like beyond total revenue?
 
-The objective is to distinguish **high revenue** from **healthy customer economics**.
+Show:
 
-## Design principle
+- New / Regular / High Value customers
+- Orders by customer segment
+- Revenue by acquisition channel
+- Average order value
+- Customer order frequency
 
-Keep the dashboard decision-oriented. Every page should answer a business question rather than simply display a chart.
+For a later version, this page could be extended with repeat-purchase cohorts. That is intentionally left out of the current sample rather than forcing a complicated metric onto a small dataset.
+
+## Layout notes
+
+Keep the first page simple enough to scan quickly.
+
+Use the other pages for investigation. A manager should be able to start at the overview, notice a change in a KPI, and then move to the page that explains it.
+
+Avoid unnecessary gauges and decorative charts. The table and trend should do most of the work.
