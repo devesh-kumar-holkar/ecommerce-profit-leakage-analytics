@@ -1,142 +1,143 @@
 # E-commerce Profit Leakage & Fulfillment Analytics
 
-A business-focused **Data Analyst portfolio project** that investigates where an e-commerce business loses contribution across the order lifecycle.
+This project looks at a problem that is easy to miss in e-commerce reporting:
 
-Instead of stopping at sales reporting, the analysis follows:
+**orders can grow while the money made on those orders does not improve at the same pace.**
 
-**Order → Discount → Payment → Shipment → Delivery → Return → Refund → Net Contribution**
+Instead of building another sales dashboard, I used order, product, seller, shipment and return data to trace where value is lost between an order being placed and the order being completed.
 
-## Business objective
+The analysis is built around four areas:
 
-A marketplace can show strong GMV while still losing margin through discounts, returns, shipping costs, cancellations and refund-related leakage.
+- discounting
+- returns and refunds
+- delivery and shipping
+- seller and product performance
 
-This project answers:
+The data in this repository is synthetic and was created for portfolio use.
 
-- Which categories and products generate revenue but weak contribution?
-- Where is discount spend eroding margin?
-- Which sellers have high cancellation, return or dispatch-delay rates?
-- Does delivery performance coincide with cancellations and returns?
-- Which regions and logistics partners have the highest fulfillment leakage?
-- How much revenue is lost through returns, refunds and cancellations?
-- Which customer segments generate repeat business without excessive return cost?
+## What I wanted to find out
 
-## Tech stack
+Some of the questions behind the analysis:
 
-- **Python:** Pandas, NumPy, Matplotlib
-- **SQL:** joins, CTEs, CASE statements, window functions and cohort-style analysis
-- **Power BI:** KPI cards, trend analysis, drill-downs and business dashboards
-- **Excel:** optional validation and ad-hoc reporting
+1. Which categories generate good sales but relatively weak product contribution?
+2. How much of the order value is being given away through discounts?
+3. Which sellers have higher cancellation or delivery-delay rates?
+4. Which return reasons account for most of the refund value?
+5. How much does shipping and return handling add to the cost of fulfilling an order?
+6. Which products are worth investigating beyond their sales number?
 
-No machine learning is used.
+The point is not to label a seller or category as "bad". The dashboard is meant to help identify **where someone should look next**.
 
-## Core business KPIs
+## Tools used
 
-### GMV
-Total merchandise value before discounts and adjustments.
+- **SQL** — joins, aggregations, CTEs and window functions
+- **Python / Pandas** — data checks and exploratory analysis
+- **Power BI** — KPI reporting and drill-down analysis
+- **Excel** — optional manual checks
 
-### Net Revenue
-Revenue after discounts and cancelled/returned order adjustments.
+There is no machine learning in this project.
 
-### Discount Rate
-Discount value as a percentage of gross merchandise value.
+## Data in the project
 
-### Return Rate
-Returned orders divided by delivered orders.
+The sample covers 2025 and contains:
 
-### Cancellation Rate
-Cancelled orders divided by total orders.
+- 500 customers
+- 40 products
+- 12 sellers
+- 600 orders
+- 600 order-item records
+- 600 shipment records
+- return records for returned orders
 
-### On-time Delivery %
-Delivered orders completed within the promised delivery date.
+The main relationships are:
 
-### Fulfillment Cost
-Shipping and logistics cost associated with fulfilled orders.
+Customers → Orders → Order Items → Products → Sellers
 
-### Net Contribution
-A simplified contribution metric:
+Orders also connect to Shipments and Returns.
 
-**Net Revenue − Shipping Cost − Return Cost − Payment Cost**
+There is deliberately no separate payments table in the current version; payment method is stored in the orders table.
 
-This is a portfolio analytical measure, not an accounting profit statement.
+## Main measures
 
-## Dataset design
+### Order value
 
-The project uses synthetic marketplace-style data with linked operational tables:
+net_order_value_inr is the order value after the recorded discount.
 
-```text
-customers
-    │
-    └── orders ─── order_items ─── products
-          │             │
-          ├── payments  └── sellers
-          │
-          └── shipments ─── logistics
-                    │
-                    └── returns / refunds
-```
+### Discount rate
 
-The data is synthetic and created for portfolio/learning purposes. It does not represent any real company's internal data.
+discount / gross amount
 
-## Dashboard pages
+### Cancellation rate
 
-### 1. Executive Profitability
-- GMV
-- Net Revenue
-- Discount Cost
-- Return Cost
-- Shipping Cost
-- Net Contribution
-- Contribution Margin %
+cancelled orders / total orders
 
-### 2. Profit Leakage
-- Discount leakage
-- Return/refund leakage
-- Cancellation leakage
-- Leakage by category
-- Product-level contribution analysis
+### Return rate
 
-### 3. Fulfillment & Seller Performance
-- On-time delivery %
-- Average delivery days
-- Seller dispatch delay
-- Cancellation rate
-- Return rate
-- Logistics partner comparison
+For this project:
 
-### 4. Customer Economics
-- New vs repeat customers
-- Orders per customer
-- Customer revenue
-- Return-heavy customers
-- Segment contribution
+returned orders / delivered orders
+
+### On-time delivery
+
+Orders marked On Time in the shipment table divided by shipped orders.
+
+### Identified fulfillment leakage
+
+For the dashboard, this is a practical tracking measure:
+
+discount + shipping cost + refund value + return handling cost
+
+It should not be treated as an accounting profit calculation. It is used here to compare where operational costs are accumulating.
+
+## SQL work
+
+The SQL folder is split into three steps:
+
+- 00_schema.sql — table definitions
+- 01_business_kpis.sql — basic business metrics
+- 02_leakage_analysis.sql — category, seller, monthly leakage and product-level analysis
+
+The queries are written so that the business question comes first and the calculation follows it.
+
+## Python work
+
+ecommerce_eda.py checks:
+
+- row counts
+- duplicate rows
+- missing values
+- basic order KPIs
+- discount levels
+- delivery performance
+- return reasons and refund values
+
+It is intentionally a small validation script rather than a large notebook full of repeated charts.
+
+## Power BI
+
+The dashboard plan is documented in:
+
+- powerbi/DAX_MEASURES.md
+- powerbi/DASHBOARD_BLUEPRINT.md
+
+The suggested report has four pages:
+
+1. **Overview** — sales, discounts and order status
+2. **Leakage** — discounts, refunds, shipping and product contribution
+3. **Fulfillment** — delivery and seller performance
+4. **Customers** — customer segments, order frequency and acquisition channels
 
 ## Repository structure
 
-```text
-ecommerce-profit-leakage-analytics/
-├── data/
-│   ├── customers.csv
-│   ├── orders.csv
-│   ├── order_items.csv
-│   ├── products.csv
-│   ├── sellers.csv
-│   ├── shipments.csv
-│   └── returns.csv
-├── python/
-│   └── ecommerce_eda.py
-├── sql/
-│   ├── 00_schema.sql
-│   ├── 01_business_kpis.sql
-│   └── 02_leakage_analysis.sql
-├── powerbi/
-│   ├── DAX_MEASURES.md
-│   └── DASHBOARD_BLUEPRINT.md
-├── DATA_DICTIONARY.md
-└── requirements.txt
-```
+- data/ — source CSV files
+- python/ — validation and exploratory analysis
+- sql/ — database schema and analysis queries
+- powerbi/ — measures and report notes
+- DATA_DICTIONARY.md — column definitions
+- requirements.txt — Python packages
 
-## Analyst workflow
+## Workflow
 
-**Raw transactional data → quality checks → metric validation → SQL business analysis → leakage investigation → Power BI reporting**
+**Check the data → calculate the basic KPIs → investigate leakage → compare sellers/products → build the dashboard.**
 
-The project demonstrates how a Data Analyst can move from operational records to actionable business questions rather than only producing a sales dashboard.
+This is meant to show the type of analysis I would do before presenting a management dashboard, rather than just putting sales numbers into a few charts.
