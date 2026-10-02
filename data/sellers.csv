@@ -1,0 +1,13 @@
+seller_id,seller_name,seller_city,seller_tier,dispatch_sla_days
+S001,Seller 01,Delhi,Silver,2
+S002,Seller 02,Mumbai,Standard,3
+S003,Seller 03,Bengaluru,Gold,1
+S004,Seller 04,Hyderabad,Silver,2
+S005,Seller 05,Pune,Standard,3
+S006,Seller 06,Jaipur,Gold,1
+S007,Seller 07,Lucknow,Silver,2
+S008,Seller 08,Bhopal,Standard,3
+S009,Seller 09,Delhi,Gold,1
+S010,Seller 10,Mumbai,Silver,2
+S011,Seller 11,Bengaluru,Standard,3
+S012,Seller 12,Hyderabad,Gold,1
