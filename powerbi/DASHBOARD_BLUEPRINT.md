@@ -1,94 +1,71 @@
 # Power BI dashboard notes
 
-The report is planned around the questions I would ask while reviewing the data. The idea is to keep each page useful on its own instead of filling the report with charts.
+The report follows the questions in the SQL analysis rather than starting with a list of chart types.
 
 ## 1. Overview
 
-**Question:** Are orders growing without the same improvement in realized order value?
+**Question:** What happened to order value after discounts?
 
 Show:
 
-- Total orders
+- total orders
 - GMV
-- Net order value
-- Average order value
-- Discount rate
-- Order status
+- net order value
+- average order value
+- discount rate
+- order status
 
-Main visuals:
+Start with a monthly GMV vs net order value trend. Then use category contribution and order status to explain the movement.
 
-- Monthly GMV and net order value
-- Monthly discount rate
-- Order status split
-- Category contribution
+Filters: month, category, customer segment and payment method.
 
-Filters:
+## 2. Leakage
 
-- Month
-- Category
-- Customer segment
-- Payment method
+**Question:** Which costs are taking the most value out of the order?
 
----
+Track:
 
-## 2. Where is value leaking?
+- discount cost
+- shipping cost
+- refund value
+- return handling cost
+- identified leakage
 
-**Question:** Which cost buckets need a closer look?
+Then break them down by category, return reason, logistics partner and product.
 
-Start with:
-
-- Discount cost
-- Shipping cost
-- Refund value
-- Return handling cost
-- Identified leakage
-
-Then break the numbers down by:
-
-- category
-- return reason
-- logistics partner
-- product
-
-A useful table here is **high-revenue products with lower contribution**. Sales alone should not decide which products get attention.
-
----
+One useful table is high-revenue products sorted by contribution. It stops the report from treating sales as the only measure of performance.
 
 ## 3. Fulfillment and sellers
 
-**Question:** Are delivery and seller operations creating avoidable cost?
+**Question:** Are delivery and seller operations adding avoidable cost?
 
-Useful views:
+Use:
 
-- On-time delivery %
-- Average shipping cost
-- Late deliveries by logistics partner
-- Seller cancellation rate
-- Seller late-delivery rate
-- Seller order volume
+- on-time delivery %
+- average shipping cost
+- late shipments by logistics partner
+- seller order volume
+- seller cancellation rate
+- seller late-delivery rate
 
-Keep order volume beside the rate. A seller with 1 late order out of 2 should not be read the same way as a seller with 20 late orders out of 200.
-
----
+Keep volume next to every rate. A 50% rate from 2 orders needs different context from a 10% rate from 200 orders.
 
 ## 4. Customers
 
-**Question:** What does the customer base look like beyond total revenue?
+**Question:** What does the customer base look like beyond revenue?
 
-Show:
+Use:
 
-- New / Regular / High Value customers
-- Orders by customer segment
-- Revenue by acquisition channel
-- Average order value
-- Customer order frequency
+- customer segment
+- order frequency
+- average order value
+- acquisition channel
+- customer revenue
 
-For a later version, this page could be extended with repeat-purchase cohorts. That is intentionally left out of the current sample rather than forcing a complicated metric onto a small dataset.
+The current sample is small, so I have not added a complicated cohort model. That can be a next version if the dataset is expanded.
 
-## Layout notes
+## Layout
 
-Keep the first page simple enough to scan quickly.
+Keep the overview page readable at a glance.
 
-Use the other pages for investigation. A manager should be able to start at the overview, notice a change in a KPI, and then move to the page that explains it.
-
-Avoid unnecessary gauges and decorative charts. The table and trend should do most of the work.
+Use the remaining pages for investigation. Avoid decorative gauges and charts that do not answer a specific question.
