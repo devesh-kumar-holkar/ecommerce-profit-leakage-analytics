@@ -1,0 +1,41 @@
+product_id,product_name,category,subcategory,seller_id,list_price_inr,unit_cost_inr
+P0001,"Audio Product 01",Electronics,Audio,S001,836,510
+P0002,"Mobile Accessories Product 02",Electronics,Mobile Accessories,S002,973,545
+P0003,"Kitchen Product 03",Home,Kitchen,S003,1110,699
+P0004,"Storage Product 04",Home,Storage,S004,1247,723
+P0005,"Footwear Product 05",Fashion,Footwear,S005,1384,900
+P0006,"Apparel Product 06",Fashion,Apparel,S006,1521,913
+P0007,"Personal Care Product 07",Beauty,Personal Care,S007,1658,912
+P0008,"Fitness Product 08",Sports,Fitness,S008,1795,1113
+P0009,"Audio Product 09",Electronics,Audio,S009,1932,1101
+P0010,"Mobile Accessories Product 10",Electronics,Mobile Accessories,S010,2069,1324
+P0011,"Kitchen Product 11",Home,Kitchen,S011,2206,1302
+P0012,"Storage Product 12",Home,Storage,S012,2343,1265
+P0013,"Footwear Product 13",Fashion,Footwear,S001,2480,1513
+P0014,"Apparel Product 14",Fashion,Apparel,S002,2617,1466
+P0015,"Personal Care Product 15",Beauty,Personal Care,S003,2754,1735
+P0016,"Fitness Product 16",Sports,Fitness,S004,2891,1677
+P0017,"Audio Product 17",Electronics,Audio,S005,3028,1968
+P0018,"Mobile Accessories Product 18",Electronics,Mobile Accessories,S006,3165,1899
+P0019,"Kitchen Product 19",Home,Kitchen,S007,3302,1816
+P0020,"Storage Product 20",Home,Storage,S008,3439,2132
+P0021,"Footwear Product 21",Fashion,Footwear,S009,3576,2038
+P0022,"Apparel Product 22",Fashion,Apparel,S010,3713,2376
+P0023,"Personal Care Product 23",Beauty,Personal Care,S011,3850,2272
+P0024,"Fitness Product 24",Sports,Fitness,S012,3987,2153
+P0025,"Audio Product 25",Electronics,Audio,S001,4124,2516
+P0026,"Mobile Accessories Product 26",Electronics,Mobile Accessories,S002,4261,2386
+P0027,"Kitchen Product 27",Home,Kitchen,S003,4398,2771
+P0028,"Storage Product 28",Home,Storage,S004,4535,2630
+P0029,"Footwear Product 29",Fashion,Footwear,S005,4672,3037
+P0030,"Apparel Product 30",Fashion,Apparel,S006,4809,2885
+P0031,"Personal Care Product 31",Beauty,Personal Care,S007,4946,2720
+P0032,"Fitness Product 32",Sports,Fitness,S008,5083,3151
+P0033,"Audio Product 33",Electronics,Audio,S009,5220,2975
+P0034,"Mobile Accessories Product 34",Electronics,Mobile Accessories,S010,5357,3428
+P0035,"Kitchen Product 35",Home,Kitchen,S011,5494,3241
+P0036,"Storage Product 36",Home,Storage,S012,5631,3041
+P0037,"Footwear Product 37",Fashion,Footwear,S001,5768,3518
+P0038,"Apparel Product 38",Fashion,Apparel,S002,5905,3307
+P0039,"Personal Care Product 39",Beauty,Personal Care,S003,6042,3806
+P0040,"Fitness Product 40",Sports,Fitness,S004,6179,3584
