@@ -1,7 +1,7 @@
 -- The idea here is to look past GMV and find where value is being lost.
 
 -- 1. Product contribution by category.
--- This uses the simplified unit_cost field in products.csv.
+-- unit_cost_inr is a simplified portfolio cost field.
 SELECT
     p.category,
     SUM(oi.line_revenue_inr) AS revenue,
@@ -18,45 +18,54 @@ ORDER BY gross_contribution DESC;
 
 
 -- 2. Seller scorecard.
--- The point is to compare operational behaviour alongside order volume.
+-- Build the seller/order level first so one order item does not
+-- accidentally give a seller multiple copies of the same order.
+WITH seller_orders AS (
+    SELECT
+        oi.seller_id,
+        o.order_id,
+        o.order_status,
+        o.gross_amount_inr,
+        o.discount_inr,
+        MAX(
+            CASE WHEN sh.delivery_status = 'Late' THEN 1 ELSE 0 END
+        ) AS was_late
+    FROM order_items oi
+    JOIN orders o
+        ON oi.order_id = o.order_id
+    LEFT JOIN shipments sh
+        ON o.order_id = sh.order_id
+    GROUP BY
+        oi.seller_id,
+        o.order_id,
+        o.order_status,
+        o.gross_amount_inr,
+        o.discount_inr
+)
 SELECT
-    p.seller_id,
+    so.seller_id,
     s.seller_name,
     s.seller_tier,
-    COUNT(DISTINCT o.order_id) AS orders,
+    COUNT(*) AS orders,
     ROUND(
-        AVG(
-            o.discount_inr / NULLIF(o.gross_amount_inr, 0)
-        ) * 100, 2
+        AVG(so.discount_inr / NULLIF(so.gross_amount_inr, 0)) * 100,
+        2
     ) AS avg_discount_pct,
     ROUND(
         100.0 * AVG(
-            CASE WHEN o.order_status = 'Cancelled' THEN 1.0 ELSE 0.0 END
+            CASE WHEN so.order_status = 'Cancelled' THEN 1.0 ELSE 0.0 END
         ), 2
     ) AS cancellation_rate_pct,
-    ROUND(
-        100.0 * AVG(
-            CASE
-                WHEN sh.delivery_status = 'Late' THEN 1.0
-                ELSE 0.0
-            END
-        ), 2
-    ) AS late_delivery_pct
-FROM products p
+    ROUND(100.0 * AVG(so.was_late), 2) AS late_delivery_pct
+FROM seller_orders so
 JOIN sellers s
-    ON p.seller_id = s.seller_id
-JOIN order_items oi
-    ON p.product_id = oi.product_id
-JOIN orders o
-    ON oi.order_id = o.order_id
-LEFT JOIN shipments sh
-    ON o.order_id = sh.order_id
-GROUP BY p.seller_id, s.seller_name, s.seller_tier
+    ON so.seller_id = s.seller_id
+GROUP BY so.seller_id, s.seller_name, s.seller_tier
 ORDER BY late_delivery_pct DESC;
 
 
--- 3. Monthly view of the costs we are tracking.
--- Aggregate each table first so joins do not multiply refund or shipping values.
+-- 3. Monthly view of the costs being tracked.
+-- Aggregate each source before joining them.
 WITH monthly_orders AS (
     SELECT
         DATE_TRUNC('month', order_date) AS month,
